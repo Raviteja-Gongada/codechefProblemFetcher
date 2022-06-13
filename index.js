@@ -66,10 +66,6 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get("/",(req,res) => {
-    res.redirect("/home");
-});
-
 const authRoutes = require("./routes/auth");
 const Tag = require("./routes/tags");
 const questions = require("./routes/questions");
@@ -79,6 +75,10 @@ app.use(authRoutes);
 app.use(Tag);
 app.use(questions);
 app.use(create);
+
+app.get("/",(req,res) => {
+    res.redirect("/home");
+});
 
 
 app.listen(port,function(err){
