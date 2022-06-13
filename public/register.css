@@ -1,0 +1,95 @@
+
+body{
+    background-color: white;
+}
+.form{
+     margin-top:1rem;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 0.13rem solid gray;
+    border-radius: 1.9rem;
+    height:40rem;
+}
+
+.logo{
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+}
+
+.loginimg{
+    height:100%;
+    border-top-left-radius: 1.9rem;
+    border-bottom-left-radius: 1.9rem;
+   object-fit: cover;
+}
+
+#btn2{
+    border:none;
+    outline:none;
+    height:3.14rem;
+    width:100%;
+    background-color: rgb(33, 33, 205);
+    color:white;
+}
+#btn1{
+  border:none;
+  outline:none;
+  height:3.14rem;
+  width:100%;
+  background-color: rgb(238, 164, 27);
+  color:white;
+}
+.btn:hover{
+    color:black;
+    background-color: white;
+    border: 0.06rem solid black;
+}
+
+.signup{
+    text-decoration: none;
+    color: rgb(57, 57, 222);
+    font-size: 1.5rem;
+}
+.login{
+    text-decoration: none;
+    color: rgb(57, 57, 222);
+    font-size: 1.5rem;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    html{
+      font-size: 50%;
+    }
+  }
+  
+  /* Media Query for low resolution  Tablets, Ipads */ 
+  @media (min-width: 480px) and (max-width: 767px) {
+    html{
+      font-size: 55%;
+    }
+  }
+  
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px){
+    html{
+      font-size: 75%;
+    }
+  }
+  
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px){
+    html{
+      font-size: 100%;
+    }
+  }
+  
+  /* Media Query for Large screens */
+  @media (min-width: 1281px) {
+    html{
+      font-size: 100%;
+    }
+  }

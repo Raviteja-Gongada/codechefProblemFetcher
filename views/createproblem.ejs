@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<link href="/register.css" rel="stylesheet">
+<link href="/create.css" rel="stylesheet">
+
+            <div class="form col-6 px-5 py-2">
+                <h1 class="m-3 text-center">Create Problem</h1>
+                <form action="/createproblem" method="post">
+                    <div class="form-row m-3">
+                        <h5>Problem Name</h5>
+                        <input class="form-control" type="text" name="problemName" placeholder="Problem Name..." required="true">
+                    </div>
+                    <div class="form-row m-3">
+                        <h5>Problem</h5>
+                        <textarea class="descrip" name="problem" id="content" rows="4" placeholder="Problem..." required="true"></textarea>
+                    </div>
+                    <div class="form-row m-3">
+                        <h5>Tags</h5>
+                        <textarea class="descrip" name="tags" id="content" rows="2" placeholder="Tags..." required="true"></textarea>
+                    </div>
+                      <div class="buttons">
+                        <button class="btn btn-primary px-3 mx-3" type="submit">Post</button>
+                        <a class="btn btn-primary px-3 mx-3" href="/">Cancel</a>
+                      </div>
+                </form>
+            </div>
+        
+<%- include('partials/footer') %>

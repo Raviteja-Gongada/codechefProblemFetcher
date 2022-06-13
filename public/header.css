@@ -1,0 +1,85 @@
+.navbar{
+    background-color: rgb(12, 17, 21);
+  }
+  
+  .navbar .navbar-nav .nav-link:hover {
+    color:rgb(0,0,0);
+    background-color: white;
+  }  
+  
+  
+  .navbar .navbar-nav .nav-link {
+  color: white;
+  font-size: 1rem;
+  transition: all 0.5s;
+  }
+  .logo-image{
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0.31rem;
+  }
+  
+  #usericon{
+  background-color: white;
+  color: gray;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  pointer-events: none;
+  margin-top: 0.38rem;
+  }
+  .user{
+  margin-left:auto;
+  margin-right:5rem;
+  }
+  
+  .navbar {
+  padding: 0;
+  }
+  .navbar .navbar-nav .nav-link {
+  padding: 1rem 0.7rem;
+  }
+  .navbar .navbar-brand {
+  padding: 0 0.8rem;
+  }
+  
+  /* Media Query for Mobile Devices */
+  /* @media (max-width: 480px) {
+    html{
+      font-size: 50%;
+    }
+  } */
+  
+  /* Media Query for low resolution  Tablets, Ipads */ 
+  @media (min-width: 576px) and (max-width: 767px) {
+    html{
+      font-size: 55%;
+    }
+  }
+  
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px){
+    html{
+      font-size: 75%;
+    }
+  }
+  
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px){
+    html{
+      font-size: 100%;
+    }
+  }
+  
+  /* Media Query for Large screens */
+  @media (min-width: 1281px) {
+    html{
+      font-size: 100%;
+    }
+  }

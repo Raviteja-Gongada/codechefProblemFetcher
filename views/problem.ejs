@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<link rel="stylesheet" href="/problem.css">
+<div class="problem">
+        <h2><%= problem.problemName %></h2>
+        <p><%- problem.body %></p>
+            <fieldset class="form-group option text-center" id="tags">
+                <h1>Tags</h1> 
+                <% for(let i in tags){ %>
+                    <div class="form-check form-check-inline">
+                    <div class="card p-2 bg-success text-white">
+                        <h3><%=tags[i]%></h3>
+                    </div>
+                </div>
+                <% } %> 
+            </fieldset>
+        <% if(isLoggedIn) {%> 
+        <form method="POST" action="/questions/addNewTag/<%= problem._id %>">
+            <input type="text" name="newTag" />
+            <button class="btn btn-danger" type="submit">Add New Tag</button>
+        </form>
+        <% } %> 
+    </div>
+    <%- include('partials/footer') %>

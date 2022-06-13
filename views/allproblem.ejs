@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+<fieldset class="form-group option text-center">
+    <h1>Selected tags</h1>
+    <% for(let i in tags){ %>
+        <div class="form-check form-check-inline">
+        <div class="card bg-success p-1 text-white">
+            <h4><%= tags[i]%></h4>
+        </div>
+    </div>
+        <% } %> 
+</fieldset>
+
+<% if(data.length) {%> 
+<fieldset class="form-group option text-center">
+    <% for(let i in data){ %>
+            <div class="form-check form-check-inline">
+                <div class="card p-4">
+                <h2><%= data[i].problemName %></h2>
+                <a class="btn btn-secondary" href="/questions/<%= data[i]._id %>">Show</a>
+            </div>
+        </div>
+        <% } %> 
+</fieldset>
+<% } else {%> 
+    <h1> There are no problems with these combination of tags</h1>
+<% } %>
+
+<%- include('partials/footer') %>
+
+
+    

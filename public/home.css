@@ -1,0 +1,63 @@
+
+#author{
+    padding: 0.3rem;
+    border: 0.2rem solid grey;
+}
+
+.heading{
+    color: blueviolet;
+}
+#concepts{
+    padding: 0.3rem;
+    border: 0.2rem solid grey;
+}
+
+.defined{
+    padding: 0.3rem;
+    border: 0.2rem solid grey;
+}
+
+.tag{
+    font-size: 2rem;
+}
+.card{
+    padding:1rem;
+    margin: 0;
+    border: 0.5rem solid rgb(45, 136, 193);
+    background-color: rgb(255, 240, 173);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    html{
+      font-size: 50%;
+    }
+  }
+  
+  /* Media Query for low resolution  Tablets, Ipads */ 
+  @media (min-width: 480px) and (max-width: 767px) {
+    html{
+      font-size: 55%;
+    }
+  }
+  
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 768px) and (max-width: 1024px){
+    html{
+      font-size: 75%;
+    }
+  }
+  
+  /* Media Query for Laptops and Desktops */
+  @media (min-width: 1025px) and (max-width: 1280px){
+    html{
+      font-size: 100%;
+    }
+  }
+  
+  /* Media Query for Large screens */
+  @media (min-width: 1281px) {
+    html{
+      font-size: 100%;
+    }
+  }

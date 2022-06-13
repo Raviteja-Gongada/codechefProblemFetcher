@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs') %>
+
+<link href="/register.css" rel="stylesheet">
+
+
+            <div class="form col-6 px-5 py-2">
+                <img src="/img/signup.png" class="logo" >
+                <h1 class="m-3 text-center">SignUp</h1>
+                <form action="/signup" method="post">
+                    <div class="form-row m-3">
+                        <h5>Fullname:</h5>
+                        <input class="form-control" type="text" name="fullname" placeholder="user" required="true">
+                    </div>
+                    <div class="form-row m-3">
+                        <h5>Email:</h5>
+                        <input class="form-control" type="email" name="email" placeholder="user@gmail.com" required="true">
+                    </div>
+                    <div class="form-row m-3">
+                        <h5>Password:</h5>
+                        <input class="form-control" minlength="10" type="password" name="password" placeholder="***********" required="true">
+                    </div>
+                    <p class="text-danger text-center"><%= message %></p>
+                    <div class="form-row m-3">
+                        <button id="btn1"class="btn" type="submit">Create Account</button>
+                    </div>
+                </form>
+                <p class="text-center">Already have an account?<a class="login" href="/login"> Login</a></p>
+            </div>
+        
+<%- include('../partials/footer.ejs') %>

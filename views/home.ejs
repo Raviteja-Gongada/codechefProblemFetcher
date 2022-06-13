@@ -1,0 +1,73 @@
+<%- include('partials/header') %>
+
+<link rel="stylesheet" href="/home.css">
+
+<div class="container"> 
+
+<form action="/questions" method="post">
+    <h2 class="text-center m-2"><button class="tag btn btn-success text-center" type="submit">Apply tags</button></h2>
+    <h1 >Select tags:</h1>
+    <h1 class="heading text-center">Based on Author</h1>
+    <fieldset class="form-group option text-center" id="author">
+        <% for(let i in authorTags){ %>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="<%= authorTags[i].tag %>" name="author" value="<%= authorTags[i].tag %>">
+                    <label for="<%= authorTags[i].tag %>"> 
+                        <div class="card">
+                            <h2 class="text-center"><%= authorTags[i].tag %></h2>
+                            <h4>
+                                <i class='fas fa-user-alt'></i>
+                                Problems
+                            </h4>
+                        </div>
+                    </label>
+                </div>
+            <% } %> 
+    </fieldset>
+    <br>
+    <br>
+    <h1 class="heading text-center">Based on Concepts</h1>
+    <fieldset class="form-group option text-center" id="concepts">
+        <% for(let i in actualTags){ %>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="<%= actualTags[i].tag %>" name="author" value="<%= actualTags[i].tag %>">
+                    <label for="<%= actualTags[i].tag %>"> 
+                        <div class="card">
+                            <h2 class="text-center"><%= actualTags[i].tag %></h2>
+                            <h4>
+                                <i class='fas fa-user-alt'></i>
+                                Problems
+                            </h4>
+                        </div>
+                    </label>
+                </div>
+            <% } %> 
+    </fieldset>
+    <br>
+    <br> 
+
+    <h1 class="heading text-center">Based on UserDefinedTags</h1>
+    <%if(userDefinedTags) { %>
+    <fieldset class="defined form-group option text-center">
+        <% for(let i in userDefinedTags){ %>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" id="<%= userDefinedTags[i] %>" name="author" value="<%= userDefinedTags[i] %>">
+                    <label for="<%= userDefinedTags[i] %>"> 
+                        <div class="card">
+                            <h2 class="text-center"><%= userDefinedTags[i] %></h2>
+                            <h4>
+                                <i class='fas fa-user-alt'></i>
+                                Problems
+                            </h4>
+                        </div>
+                    </label>
+                </div>
+            <% } %> 
+    </fieldset>
+    <% } else { %>
+        <h2 class="defined text-center">No tags</h2>
+        <% } %>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
