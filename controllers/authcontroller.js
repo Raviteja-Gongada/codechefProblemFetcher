@@ -1,4 +1,4 @@
-const database = require("../models/User");
+const database = require("../models/user");
 const bcrypt =require("bcrypt");
 
 exports.logout = (req,res) => {
