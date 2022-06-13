@@ -1,6 +1,6 @@
 const question = require("../models/question");
 const Tag = require("../models/tag");
-const User = require("../models/User");
+const User = require("../models/user");
 const userDefined = require("../models/userDefinedTag");
 
 exports.getAllTags = async (req,res) => {
